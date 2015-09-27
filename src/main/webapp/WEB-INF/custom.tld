@@ -11,7 +11,7 @@
     <tag>
         <name>json</name>
         <tag-class>com.epam.jsp_training.JsonTag</tag-class>
-        <body-content>empty</body-content>
+        <body-content>scriptless</body-content>
     </tag>
 
 </taglib>

@@ -9,8 +9,25 @@
     <title></title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/json.css" rel="stylesheet">
+
 </head>
 <body>
-    <ex:json/>
+<div class="container">
+    <div class="page-header">
+        <h1>JSON</h1>
+    </div>
+    <form class="form-group lead" action="json" method="post">
+        <p>
+            <textarea name="json" class="form-control" rows="10"></textarea>
+        </p>
+        <button type="submit" class="btn btn-success">Format JSON</button>
+    </form>
+
+    <div class="page-header">
+        <h1>Formatted JSON</h1>
+    </div>
+    <ex:json>${json}</ex:json>
+</div>
 </body>
 </html>
