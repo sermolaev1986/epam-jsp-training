@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title></title>
+    <title>JSON</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/json.css" rel="stylesheet">

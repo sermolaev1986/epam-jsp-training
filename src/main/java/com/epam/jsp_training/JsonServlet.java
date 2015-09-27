@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- *
+ * Serves POST requests with json string and forwards to appropriate jsp page.
  */
 @WebServlet(value = "/json")
 public class JsonServlet extends HttpServlet {

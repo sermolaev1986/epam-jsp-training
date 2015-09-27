@@ -1,3 +1,8 @@
+/**
+ * Handles AJAX requests to get coordinates from user-provided address string.
+ * Uses Google Geocoding API to retrieve coordinates.
+ * Stores user input in session.
+ */
 def api_key = 'AIzaSyBwGDozCsY1vb2DR8cHxYsWgty7mb_5LKs'
 def google_api_url = 'https://maps.googleapis.com/maps/api/geocode/xml'
 

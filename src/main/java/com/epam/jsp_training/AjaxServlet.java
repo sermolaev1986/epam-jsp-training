@@ -13,7 +13,8 @@ import java.util.HashSet;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
- *
+ * Serves AJAX requests to manage English dictionary.
+ * Dictionary is loaded into memory on server startup.
  */
 @WebServlet(value = "/ajax")
 public class AjaxServlet extends HttpServlet {
