@@ -9,7 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <script>
-        function onGet() {
+        function onGetCoordinates() {
             var xmlhttp = new XMLHttpRequest();
             var address = document.getElementById("addressBox").value;
             xmlhttp.onreadystatechange = function () {
@@ -18,6 +18,17 @@
                 }
             };
             xmlhttp.open("GET", "geolocation.groovy?address=" + address, true);
+            xmlhttp.send();
+        }
+
+        function onGetUserActions() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("userActionsDisplay").innerHTML = xmlhttp.responseText;
+                }
+            };
+            xmlhttp.open("GET", "useractions.groovy", true);
             xmlhttp.send();
         }
     </script>
@@ -30,10 +41,17 @@
     <div class="text-center">
         <form class="form-inline lead">
             <input type="text" id="addressBox" class="form-control"/>
-            <button type="button" class="btn btn-success" onclick="onGet()">Get coordinates</button>
+            <button type="button" class="btn btn-success" onclick="onGetCoordinates()">Get coordinates</button>
         </form>
         <p>
-            <textarea id="coordinatesDisplay" class="form-control" rows="25"></textarea>
+            <textarea id="coordinatesDisplay" class="form-control" rows="10"></textarea>
+        </p>
+
+        <form class="form-inline lead">
+            <button type="button" class="btn btn-success" onclick="onGetUserActions()">Get user actions</button>
+        </form>
+        <p>
+            <textarea id="userActionsDisplay" class="form-control" rows="10"></textarea>
         </p>
     </div>
 </div>
