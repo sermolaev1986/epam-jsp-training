@@ -30,7 +30,8 @@ Don’t forget error pages. Don’t forget anything.
 Solution
 ------------
 All parts of assignment were implemented in **single web app**. **Maven** is used as build tool 
-and dependency management tool. For pretty styles, **bootstrap css** is used.
+and dependency management tool. Project can be run and debugged using **maven jetty plugin**. 
+For pretty styles, **bootstrap css** is used.
 
 1.Implemented app works with dictionary of the most frequently used English words. 
 There is [dictionary.jsp](src/main/webapp/dictionary.jsp) with embedded js scripts to make Ajax calls. 
@@ -51,7 +52,8 @@ which are saved to session in geolocation.groovy.
 [com.epam.jsp_training.JsonServlet](src/main/java/com/epam/jsp_training/JsonServlet.java) is used to handle POST requests 
 with user-provided json and redirect back to **json.jsp** but with json input 
 passed to the page as **request attribute**.
-Custom tag is implemented in [com.epam.jsp_training.JsonTag](src/main/java/com/epam/jsp_training/JsonTag.java) class. 
+Custom tag is implemented in [com.epam.jsp_training.JsonTag](src/main/java/com/epam/jsp_training/JsonTag.java) class
+and declared in [custom.tld](src/main/webapp/WEB-INF/custom.tld).
 Theoretically, implementation supports **any number of nesting levels** 
 and uses **regular expressions** in its basis.
 This is actually only scratch which can be improved further.
