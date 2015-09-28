@@ -7,6 +7,7 @@
     <title>Geolocation</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jsp-training.css" rel="stylesheet">
 
     <script>
         function onGetCoordinates() {
