@@ -33,25 +33,29 @@ All parts of assignment were implemented in **single web app**. **Maven** is use
 and dependency management tool. For pretty styles, **bootstrap css** is used.
 
 1.Implemented app works with dictionary of the most frequently used English words. 
-There is **dictionary.jsp** with embedded js scripts to make Ajax calls. 
+There is [dictionary.jsp](src/main/webapp/dictionary.jsp) with embedded js scripts to make Ajax calls. 
 Ajax calls handler is implemented in [com.epam.jsp_training.AjaxServlet](src/main/java/com/epam/jsp_training/AjaxServlet.java) 
-It loads English dictionary from **/WEB-INF/dictionary.txt** into in-memory collection. 
+It loads English dictionary from [dictionary.txt](src/main/webapp/WEB-INF/dictionary.txt) into in-memory collection. 
 Servlet implements doGet, doPost, doDelete to manage in-memory dictionary.
 This servlet is thread-safe (as it's supposed to be).
  
-2.Functionality was implemented using **groovlets**. There is **geolocation.jsp** 
+2.Functionality was implemented using **groovlets**. There is [geolocation.jsp](src/main/webapp/geolocation.jsp) 
 with embedded js scripts (Ajax calls), and two groovy scripts - 
-**geolocation.groovy** and **useractions.groovy**. 
+[geolocation.groovy](src/main/webapp/WEB-INF/groovy/geolocation.groovy) and [useractions.groovy](src/main/webapp/WEB-INF/groovy/useractions.groovy). 
 geolocation.groovy handles requests with address input, saves them to session, 
 calls **Google Geocoding API**, parses response and returns coordinates.
 useractions.groovy returns user inputs typed earlier, 
 which are saved to session in geolocation.groovy.
 
-3.There is **json.jsp** with custom tag included. Custom tag is implemented in 
-**com.epam.jsp_training.JsonTag** class. Theoretically, implementation supports
- **any number of nesting levels** and uses **regular expressions** in its basis.
+3.There is [json.jsp](src/main/webapp/json.jsp) with custom tag included. 
+[com.epam.jsp_training.JsonServlet](src/main/java/com/epam/jsp_training/JsonServlet.java) is used to handle POST requests 
+with user-provided json and redirect back to **json.jsp** but with json input 
+passed to the page as **request attribute**.
+Custom tag is implemented in [com.epam.jsp_training.JsonTag](src/main/java/com/epam/jsp_training/JsonTag.java) class. 
+Theoretically, implementation supports **any number of nesting levels** 
+and uses **regular expressions** in its basis.
 This is actually only scratch which can be improved further.
-css styles for json pretty formatting are provided in **css/json.css**.
+css styles for json pretty formatting are provided in [json.css](src/main/webapp/css/json.css).
 There is only style at the moment to support indentation, **no colored output supported**.
 The solution is partly finished.
 
