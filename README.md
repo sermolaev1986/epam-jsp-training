@@ -34,7 +34,7 @@ and dependency management tool. For pretty styles, **bootstrap css** is used.
 
 1.Implemented app works with dictionary of the most frequently used English words. 
 There is **dictionary.jsp** with embedded js scripts to make Ajax calls. 
-Ajax calls handler is implemented in **com.epam.jsp_training.AjaxServlet** class. 
+Ajax calls handler is implemented in [com.epam.jsp_training.AjaxServlet](src/main/java/com/epam/jsp_training/AjaxServlet.java) 
 It loads English dictionary from **/WEB-INF/dictionary.txt** into in-memory collection. 
 Servlet implements doGet, doPost, doDelete to manage in-memory dictionary.
 This servlet is thread-safe (as it's supposed to be).
