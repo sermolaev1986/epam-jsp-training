@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="t" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,8 +7,7 @@
 
     <title>Geolocation</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/jsp-training.css" rel="stylesheet">
+    <t:css/>
 
     <script>
         function onGetCoordinates() {

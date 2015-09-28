@@ -1,4 +1,5 @@
 <%@ taglib prefix="ex" uri="http://epam.com" %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="t" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
@@ -8,8 +9,7 @@
 
     <title>JSON</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/jsp-training.css" rel="stylesheet">
+    <t:css/>
     <link href="css/json.css" rel="stylesheet">
 
 </head>
