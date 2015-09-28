@@ -62,3 +62,12 @@ There is only style at the moment to support indentation, **no colored output su
 The solution is partly finished.
 
 4.This part of assignment **was NOT done yet**.
+
+Deployment on Tomcat 8
+------------
+1.Install Java 8 jre or jdk.
+2.Install and configure tomcat 8.
+3.Build war file from sources (or use provided if you received one).
+4.Put war into webapps directory.
+5.Go to http://localhost:8080/jsp-training (if your war is named jsp-training.war).
+6.Use navigation and enjoy.
